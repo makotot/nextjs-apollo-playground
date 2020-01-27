@@ -48,8 +48,13 @@ Ensure that there is only one instance of "graphql" in the node_modules
 
 #### 型ファイル生成
 ```sh
-$ yarn run apollo client:codegen
+$ yarn run apollo client:codegen --target=typescript types
 ```
+
+## Apollo Client Devtools
+
+chrome拡張 https://github.com/apollographql/apollo-client-devtools
+
 
 ---
 
