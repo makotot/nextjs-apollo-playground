@@ -5,6 +5,7 @@ export const ARTICLES_QUERY = gql`
     articles {
       id
       title
+      published_at
       category {
         id
         name

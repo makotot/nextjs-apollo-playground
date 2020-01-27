@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import { useQuery } from '@apollo/react-hooks'
 
 const Query = ({ children, query, id }: {
@@ -19,7 +19,7 @@ const Query = ({ children, query, id }: {
     return <p>Error!</p>
   }
 
-  return children({ data })
+  return children({ data }) as ReactElement
 }
 
 export {

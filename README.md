@@ -26,6 +26,22 @@ GraphQLのクエリをフェッチして結果を`data`プロパティから取�
 
 > Apollo CLI brings together your GraphQL clients and servers with tools for validating your schema, linting your operations for compatibility with your server, and generating static types for improved client-side type safety.
 
+### [apollo.config.js](https://www.apollographql.com/docs/devtools/apollo-config/)
+
+> If you're using one of our workflow tools like the Apollo CLI or the Apollo VS Code extension, you'll need to have an apollo.config.js project to get the features those tools bring.
+
+#### schema生成
+```sh
+$ yarn run apollo client:download-schema --endpoint=http://localhost:1337/graphql graphql-schema.json
+```
+
+node_modules内のgraphqlが複数バージョン入ってしまって、https://github.com/apollographql/apollo-tooling/issues/1296 のようなエラーが起きるケースがあるが詳細不明
+
+#### 型ファイル生成
+```sh
+$ yarn run apollo client:codegen
+```
+
 ---
 
 # Next

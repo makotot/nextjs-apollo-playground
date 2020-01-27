@@ -25,6 +25,7 @@
     "utils"
   ],
   "exclude": [
+    "types/globalTypes.ts",
     "node_modules"
   ]
 }

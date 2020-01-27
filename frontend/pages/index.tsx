@@ -1,6 +1,7 @@
 import React from 'react'
 import { Query } from '../components/Query'
 import { ARTICLES_QUERY } from '../apollo/queries/article/articles'
+import * as ArticleTypes from '../apollo/queries/article/types/Articles'
 import { Articles } from '../components/Articles'
 
 const Index = () => (
@@ -8,10 +9,7 @@ const Index = () => (
     {
       ({ data: { articles }}: {
         data: {
-          articles: {
-            id: string;
-            title: string;
-          }[];
+          articles: ArticleTypes.Articles['articles'];
         };
       }) => (
         <Articles articles={ articles } />
