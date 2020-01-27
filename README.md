@@ -35,7 +35,16 @@ GraphQLのクエリをフェッチして結果を`data`プロパティから取�
 $ yarn run apollo client:download-schema --endpoint=http://localhost:1337/graphql graphql-schema.json
 ```
 
-node_modules内のgraphqlが複数バージョン入ってしまって、https://github.com/apollographql/apollo-tooling/issues/1296 のようなエラーが起きるケースがあるが詳細不明
+node_modules内のgraphqlが複数バージョン入ってしまって、https://github.com/apollographql/apollo-tooling/issues/1296 のようなエラーが起きるケースがある。graphqlのバージョン固定しておけば起きない
+
+```sh
+$ node_modules/.bin/apollo client:download-schema --endpoint=http://localhost:1337/graphql graphql-schema.json
+  ✔ Loading Apollo Project
+  ✖ Saving schema to graphql-schema.json
+    → spurious results.
+Error: Cannot use GraphQLSchema "[object GraphQLSchema]" from another module or realm.
+Ensure that there is only one instance of "graphql" in the node_modules
+```
 
 #### 型ファイル生成
 ```sh
@@ -49,3 +58,4 @@ $ yarn run apollo client:codegen
 ## [_app.js](https://nextjs.org/docs/advanced-features/custom-app)
 
 > Next.js uses the App component to initialize pages. You can override it and control the page initialization. 
+
