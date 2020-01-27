@@ -5,8 +5,7 @@ module.exports = {
       './apollo/**/*.ts',
     ],
     service: {
-      name: 'nextjs-apollo-playground',
-      localSchemaFile: './graphql-schema.json',
+      url: 'http://localhost:1337/graphql',
     },
   },
 }
