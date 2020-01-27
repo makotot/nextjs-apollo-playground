@@ -22,6 +22,10 @@ reduxにおける`<Provider />`と同じような働きをするコンポーネ�
 GraphQLのクエリをフェッチして結果を`data`プロパティから取り出せるhooks
 
 
+## [Apollo tooling](https://github.com/apollographql/apollo-tooling)
+
+> Apollo CLI brings together your GraphQL clients and servers with tools for validating your schema, linting your operations for compatibility with your server, and generating static types for improved client-side type safety.
+
 ---
 
 # Next
